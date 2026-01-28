@@ -277,7 +277,7 @@ async function liteReconcile() {
  * Step 1: Fetch RSI signals
  */
 async function fetchSignals() {
-  log('Fetching RSI signals from Binance...');
+  log('Fetching RSI signals from Orderly...');
   const signals = await getTradeableSignals();
   REPORT.signals = signals;
   
