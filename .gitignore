@@ -1,0 +1,12 @@
+# Secrets
+secrets/
+*.secret
+*.key
+
+# State files (runtime)
+state/
+logs/
+alerts/
+
+# Node
+node_modules/

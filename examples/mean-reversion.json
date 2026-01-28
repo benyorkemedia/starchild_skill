@@ -1,0 +1,102 @@
+{
+  "name": "Alpha Predator",
+  "version": "1.1.0",
+  "description": "Enhanced bear market strategy: Long strong assets when RSI < 55, Short weak assets when RSI > 45",
+  "long_assets": [
+    "BTC",
+    "ETH",
+    "WOO",
+    "ZEC",
+    "XMR"
+  ],
+  "short_assets": [
+    "ARB",
+    "APT",
+    "SUI",
+    "OP",
+    "AVAX",
+    "NEAR",
+    "ICP",
+    "ZRO",
+    "PUMP",
+    "XPL",
+    "BERA",
+    "S"
+  ],
+  "rsi": {
+    "period": 14,
+    "timeframe": "1d",
+    "long_entry": 55,
+    "short_entry": 45,
+    "market_bias_oversold": 35,
+    "market_bias_overbought": 65
+  },
+  "entry": {
+    "long": {
+      "condition": "rsi < 55",
+      "assets": [
+        "BTC",
+        "ETH",
+        "WOO",
+        "ZEC",
+        "XMR"
+      ]
+    },
+    "short": {
+      "condition": "rsi > 45",
+      "assets": [
+        "ARB",
+        "APT",
+        "SUI",
+        "OP",
+        "AVAX",
+        "NEAR",
+        "ICP",
+        "ZRO",
+        "PUMP",
+        "XPL",
+        "BERA",
+        "S"
+      ]
+    }
+  },
+  "position": {
+    "default_leverage": 15,
+    "max_leverage": 15,
+    "total_exposure_pct": 94,
+    "max_positions": 8,
+    "dynamic_sizing_multiplier": 2.5,
+    "position_size_pct": 10,
+    "min_position_usd": 100,
+    "max_position_usd": 500
+  },
+  "risk": {
+    "stop_loss_pct": 5,
+    "take_profit_pct": 25,
+    "trailing_stop_pct": null,
+    "max_daily_loss_pct": 10,
+    "max_drawdown_pct": 20,
+    "min_margin_ratio": 0.10
+  },
+  "schedule": {
+    "cycle_time_utc": "00:00",
+    "interval_hours": 24
+  },
+  "flags": {
+    "enabled": true,
+    "dry_run": false,
+    "allow_shorts": true,
+    "auto_set_sl_tp": true
+  },
+  "excludeSymbols": [
+    "ZRO"
+  ],
+  "excludeReason": {
+    "ZRO": "LayerZero event next week (late Jan 2026) - potential catalyst risk"
+  },
+  "notifications": {
+    "on_trade": true,
+    "on_signal": true,
+    "daily_summary": true
+  }
+}
