@@ -162,7 +162,6 @@ skills/woofi/
 ## Current Limitations
 
 - **No test suite** — Needs unit/integration tests for institutional use
-- **Single exchange** — WOOFi Pro / Orderly only
 - **RSI only** — Other indicators (MACD, Bollinger) not yet implemented
 - **No backtesting** — Live or dry-run only
 
